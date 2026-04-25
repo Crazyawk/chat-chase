@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>Neon Pursuit 3D</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <div id="hud">
+    <div id="topLeft" class="panel">
+      <h1>NEON PURSUIT 3D</h1>
+      <p>Finite GTA-style mini map: city, plains, desert.</p>
+      <p>Green beams = checkpoints. Red dots = cops.</p>
+    </div>
+
+    <div id="stats" class="panel">
+      <div class="stat"><span>Zone</span><span id="zone">City</span></div>
+      <div class="stat"><span>Speed</span><span id="speed">0 mph</span></div>
+      <div class="stat"><span>Wanted</span><span id="wanted">★☆☆☆☆</span></div>
+      <div class="stat"><span>Damage</span><span id="damage">0%</span></div>
+      <div class="stat"><span>Nitro</span><span id="nitro">100%</span></div>
+      <div class="stat"><span>Score</span><span id="score">0</span></div>
+      <div class="stat"><span>Time</span><span id="time">0:00</span></div>
+    </div>
+
+    <div id="center" class="panel"></div>
+    <canvas id="minimap"></canvas>
+  </div>
+
+  <div id="flash"></div>
+
+  <div id="mobile">
+    <button class="touch" id="left">←</button>
+    <button class="touch" id="right">→</button>
+    <button class="touch" id="brake">BRAKE</button>
+    <button class="touch" id="gas">GAS</button>
+    <button class="touch wide" id="boost">NITRO</button>
+  </div>
+
+  <div id="errorBox"></div>
+
+  <!-- Classic script build on purpose: this works better on GitHub Pages than module imports. -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="./src/main.js"></script>
+</body>
+</html>
